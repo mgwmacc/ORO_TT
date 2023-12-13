@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        autowire: true
+
+    chain_command.manager:
+        class: TestTask\ChainCommandBundle\Service\CommandChainManagerService
+
+    chain_command.subscriber:
+        class: TestTask\ChainCommandBundle\EventSubscriber\ConsoleCommandSubscriber
+        arguments: [ '@chain_command.manager', '@logger' ]
+        tags:
+            - { name: kernel.event_subscriber }
+
+parameters:
+    chain_command:
+        foo:hello:
+            - bar:hi
+            # [EXAMPLE]: this will be skipped as the name is the same as "parent/master" command.
+            - foo:hello

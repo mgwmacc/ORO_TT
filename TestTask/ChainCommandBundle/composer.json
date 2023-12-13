@@ -1,0 +1,16 @@
+{
+    "type": "ccbundle",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\ChainCommandBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\ChainCommandBundle\\Tests\\": "tests/"
+        }
+    }
+}
