@@ -8,6 +8,9 @@ use TestTask\ChainCommandBundle\Service\CommandChainManagerService;
 
 class CommandChainManagerServiceTest extends TestCase
 {
+    /**
+     * @var CommandChainManagerService
+     */
     private CommandChainManagerService $commandChainManagerService;
 
     /**
